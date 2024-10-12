@@ -27,6 +27,7 @@ gradio*
 *playground*
 run_phonemizer.py
 
+*.ipynb
 *.pt
 *.out
 *.wav
