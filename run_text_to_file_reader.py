@@ -20,20 +20,11 @@ def moore_test(version, model_id=None, exec_device="cpu", speaker_reference=None
     read_texts(model_id=model_id,
                sentence=["""M yet-y lame tɩ kuga sẽn dɩgã, Wẽnd tõe n yiisa a Abraam kamb b pʋsẽ. 
                             Lar zoe n dɩga tɩɩga sɛɛga; tɩɩg ninga fãa sẽn pa womda bi-sõma, 
-                            b na n kɛɛg-a lame n yõog bugum. 11Mam yẽ kõt-y la soob koomẽ y zʋg 
-                            tekr yĩnga la mam sẽn deng a soab taoorã yɩɩda maam; paam n lodg a 
-                            neodr gĩs menga looga maam; yẽ na n soo yãmb ne a Vʋʋsem Sõng la bugum. 
-                            A zãada kaorg a nugẽ n na n yelg a kood zɛɛgẽ; 
-                            ka-bɛɛla na n suii baoorẽ, la fɩɩba na n yõoga bugum ning sẽn ka kiida pʋgẽ."""],
-               filename=f"audios/{model_id}_english_test_{version}.wav",
+                            b na n kɛɛg-a lame n yõog bugum."""],
+               filename=f"audios/{model_id}_test_{version}.wav",
                device=exec_device,
                language="mos",
                speaker_reference=speaker_reference)
-
-
-def all_test(version, model_id=None, exec_device="cpu", speaker_reference=None):
-    moore_test(version, model_id, exec_device, speaker_reference)
-    #french_test(version, model_id, exec_device, speaker_reference)
 
 
 if __name__ == '__main__':
@@ -43,7 +34,7 @@ if __name__ == '__main__':
     os.makedirs("audios/speaker_references/", exist_ok=True)
     merged_speaker_references = ["audios/speaker_references/" + ref for ref in os.listdir("audios/speaker_references/")]
 
-    moore_test( version="version_11",
+    moore_test( version="version_3",
                 model_id="mos_ToucanTTS",  # use the finetuned model
                 exec_device=exec_device,
                 speaker_reference=merged_speaker_references if merged_speaker_references != [] else None)

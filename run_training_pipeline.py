@@ -10,38 +10,32 @@ from Recipes.BigVGAN_e2e import run as be2e
 from Recipes.HiFiGAN_combined import run as HiFiGAN
 from Recipes.HiFiGAN_e2e import run as e2e
 from Recipes.ToucanTTS_IntegrationTest import run as tt_integration_test
-from Recipes.ToucanTTS_Massive_English_stage1 import run as eng1
-from Recipes.ToucanTTS_Massive_English_stage2 import run as eng2
-from Recipes.ToucanTTS_Massive_German import run as deu
-from Recipes.ToucanTTS_Massive_stage1 import run as stage1
-from Recipes.ToucanTTS_Massive_stage2 import run as stage2
-from Recipes.ToucanTTS_Massive_stage3 import run as stage3
-from Recipes.ToucanTTS_Nancy import run as nancy
+
 from Recipes.finetuning_example_multilingual import run as fine_tuning_example_multilingual
-from Recipes.finetuning_example_simple import run as fine_tuning_example_simple
+from Recipes.moore_simple_finetuning import run as moore_simple_finetuning
+from Recipes.moore_training_from_scratch import run as moore_training_from_scratch
 
 
 pipeline_dict = {
-    # the finetuning examples
-    "finetuning_example_simple"      : fine_tuning_example_simple,
+    # finetuning 
+    "moore_finetuning"               : moore_simple_finetuning,
     "finetuning_example_multilingual": fine_tuning_example_multilingual,
+
     # integration test
     "tt_it"                          : tt_integration_test,
-    # regular ToucanTTS pipelines
-    "nancy"                          : nancy,
-    "eng1"                           : eng1,
-    "eng2"                           : eng2,
-    "deu"                            : deu,
-    "stage1"                         : stage1,
-    "stage2"                         : stage2,
-    "stage3"                         : stage3,
+    
+    # regular ToucanTTS training pipelines (from scratch)
+    "moore_training_from_scratch"    : moore_training_from_scratch,
+
     # training the aligner from scratch (not recommended, best to use provided checkpoint)
     "aligner"                        : aligner,
+
     # vocoder training (not recommended, best to use provided checkpoint)
     "hifigan"                        : HiFiGAN,
     "e2e" : e2e,
     "be2e": be2e
 }
+
 
 if __name__ == '__main__':
 

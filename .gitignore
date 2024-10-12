@@ -3,6 +3,8 @@ tensorboard_logs/
 Corpora/
 Models/
 audios/
+dataset/
+audios/
 Preprocessing/glottolog/
 Preprocessing/multilinguality/datasets/
 apex/
@@ -17,7 +19,8 @@ vis/
 Utility/storage_config.py
 Preprocessing/multilinguality/distance_datasets
 
-
+.env
+.cache
 *_graph
 app.py
 gradio*
