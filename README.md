@@ -105,7 +105,7 @@ In this file you should write a **function that returns a dictionary** that has 
 For reference, check ` moore_audio_metadata_to_dict()` function for Moore language.
 
 
-## Training / Finetuning Pipeline
+## III. Training / Finetuning Pipeline
 
 ### Finetuning a pretrained model
 Again, follow these instructions:
@@ -183,7 +183,7 @@ data will appear. Since the checkpoints are quite big, only the five most recent
 <br>
 
 
-## Inference 🦢
+## IV. Inference 🦢
 You can load your trained models, or the pretrained provided one, using the `InferenceInterfaces/ToucanTTSInterface.py`.
 Simply create an object from it with the proper directory handle identifying the model you want to use. The rest should work out in the background. You might want to set a language
 embedding or a speaker embedding using the *set_language* and *set_speaker_embedding* functions. Most things should be self-explanatory.
@@ -206,7 +206,7 @@ To change the language of the model and see which languages are available in our
 <br>
 
 
-## References / Links 🦚 🐧
+## V. References / Links 🦚 🐧
 
 - [IMS-Toucan GitHub repository](https://github.com/DigitalPhonetics/IMS-Toucan/tree/MassiveScaleToucan)
 
