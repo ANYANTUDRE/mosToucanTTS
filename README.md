@@ -111,12 +111,12 @@ For reference, check ` moore_audio_metadata_to_dict()` function for Moore langua
 Again, follow these instructions:
 
 - **Step 1: Creating a new Recipe 🐣**   
-Go to the directory *TrainingInterfaces/Recipes*. In there, make a copy of the `moore_simple_finetuning.py`.
+  Go to the directory *TrainingInterfaces/Recipes*. In there, make a copy of the `moore_simple_finetuning.py`.
 
-We will use this copy as reference and only make the necessary changes to use the new dataset. 
-  * Find the call(s) to the `prepare_tts_corpus` function. Replace the `path_to_transcript_dict` used there with the one(s) you just created. Then change the name of the corresponding cache directory to something that makes sense for the dataset.
-  * Also look out for the variable `save_dir`, which is where the checkpoints will be saved to. This is a default value, you can overwrite it when calling the pipeline later using a command line argument, in case you want to fine-tune from a checkpoint and thus save into a different directory. 
-  * Finally, change the `lang` argument in the creation of the dataset and in the call to the train loop function to the **ISO 639-3 language ID** (like `mos` in our case) that matches your data.
+  We will use this copy as reference and only make the necessary changes to use the new dataset. 
+  - Find the call(s) to the `prepare_tts_corpus` function. Replace the `path_to_transcript_dict` used there with the one(s) you just created. Then change the name of the corresponding cache directory to something that makes sense for the dataset.
+  - Also look out for the variable `save_dir`, which is where the checkpoints will be saved to. This is a default value; you can overwrite it when calling the pipeline later using a command line argument in case you want to fine-tune from a checkpoint and thus save into a different directory.
+  - Finally, change the `lang` argument in the creation of the dataset and in the call to the train loop function to the **ISO 639-3 language ID** (like `mos` in our case) that matches your data.
 
 
 - **Step 2: Adapt `run_training_pipeline.py` script**   
